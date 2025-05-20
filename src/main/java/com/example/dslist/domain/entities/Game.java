@@ -1,9 +1,6 @@
 package com.example.dslist.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Objects;
 
@@ -11,11 +8,11 @@ import java.util.Objects;
 @Entity
 @Table(name = "tb_game")
 
-public class Games {
+public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(unique = true, nullable = false)
     private String title;
@@ -29,13 +26,15 @@ public class Games {
     private String imgUrl;
     @Column(nullable = false)
     private Double score;
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
 
-    public Games(){}
+    public Game(){}
 
-    public Games(long id, String title, Integer year, String genre, String platforms, String imgUrl, Double score, String shortDescription, String longDescription){
+    public Game(Long id, String title, Integer year, String genre, String platforms, String imgUrl, Double score, String shortDescription, String longDescription){
         this.id = id;
         this.title = title;
         this.year = year;
@@ -52,7 +51,7 @@ public class Games {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -123,8 +122,8 @@ public class Games {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Games games)) return false;
-        return getId() == games.getId() && Objects.equals(title, games.title) && Objects.equals(year, games.year) && Objects.equals(genre, games.genre) && Objects.equals(platforms, games.platforms) && Objects.equals(imgUrl, games.imgUrl) && Objects.equals(score, games.score) && Objects.equals(shortDescription, games.shortDescription) && Objects.equals(longDescription, games.longDescription);
+        if (!(o instanceof Game game)) return false;
+        return getId() == game.getId() && Objects.equals(title, game.title) && Objects.equals(year, game.year) && Objects.equals(genre, game.genre) && Objects.equals(platforms, game.platforms) && Objects.equals(imgUrl, game.imgUrl) && Objects.equals(score, game.score) && Objects.equals(shortDescription, game.shortDescription) && Objects.equals(longDescription, game.longDescription);
     }
 
     @Override
