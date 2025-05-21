@@ -2,6 +2,9 @@ package com.example.dslist.api.DTO;
 
 
 import com.example.dslist.domain.entities.Game;
+import com.example.dslist.projections.GameMinProjection;
+import org.springframework.beans.BeanUtils;
+
 public class GameMinDTO {
 
 
@@ -43,6 +46,14 @@ public class GameMinDTO {
         this.year = game.getYear();
         this.imgUrl = game.getImgUrl();
         this.shortDescription = game.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection gameMinProjection){
+        this.id = gameMinProjection.getId();
+        this.year = gameMinProjection.getYear();
+        this.title = gameMinProjection.getTitle();
+        this.shortDescription = gameMinProjection.getShortDescription();
+        this.imgUrl = gameMinProjection.getImgUrl();
     }
 
 }

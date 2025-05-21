@@ -11,6 +11,7 @@ public class GameListDTO {
     public GameListDTO(){}
 
     public GameListDTO(GameList gameList){
+
         BeanUtils.copyProperties(gameList,this);
     }
 

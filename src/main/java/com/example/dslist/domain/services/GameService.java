@@ -4,6 +4,7 @@ package com.example.dslist.domain.services;
 import com.example.dslist.api.DTO.GameDTO;
 import com.example.dslist.api.DTO.GameMinDTO;
 import com.example.dslist.domain.entities.Game;
+import com.example.dslist.projections.GameMinProjection;
 import com.example.dslist.repositories.GameRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,10 +39,15 @@ public class GameService {
            return new GameDTO(game);
        }else throw new RuntimeException("Game não encontrado");
 
+    }
 
 
-
-
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> findyByList(Long id) {
+        List<GameMinProjection> gameMinProjections = gameRepository.searchByList(id);
+        return gameMinProjections.stream()
+                .map(GameMinDTO::new)
+                .collect(Collectors.toList());
     }
 
 }
