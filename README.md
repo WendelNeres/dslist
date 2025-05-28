@@ -23,7 +23,7 @@ Você pode testar a API publicada em produção por meio da Railway:
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Java 17  
+- Java 21  
 - Spring Boot  
 - Spring Data JPA  
 - Docker  
@@ -48,3 +48,23 @@ Você pode testar a API publicada em produção por meio da Railway:
 ```bash
 git clone https://github.com/WendelNeres/dslist.git
 cd dslist
+```
+---
+
+## 🧠 Aprendizados
+Estrutura em camadas no Spring (Controller, Service, Repository)
+Integração com JPA e DTOs
+Deploy completo com Docker + PostgreSQL + Railway
+Organização de entidades e relacionamentos
+
+---
+
+# 📄 Licença
+Este projeto está sob a licença MIT – sinta-se à vontade para usar, estudar e contribuir!
+
+---
+
+# 🙋‍♂️ Autor
+Feito com 💻 por Wendel Neres
+Entre em contato via LinkedIn
+
