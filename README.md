@@ -52,10 +52,10 @@ cd dslist
 ---
 
 ## 🧠 Aprendizados
-Estrutura em camadas no Spring (Controller, Service, Repository)
-Integração com JPA e DTOs
-Deploy completo com Docker + PostgreSQL + Railway
-Organização de entidades e relacionamentos
+- 🔹 Estrutura em camadas no Spring (Controller, Service, Repository)
+- 🔹 Integração com JPA e DTOs
+- 🔹 Deploy completo com Docker + PostgreSQL + Railway
+- 🔹 Organização de entidades e relacionamentos
 
 ---
 
